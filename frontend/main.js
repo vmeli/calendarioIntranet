@@ -33,7 +33,7 @@ window.addEventListener('load', function () {
 	        "enero":{
 	              "5":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Rubén":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
 	                                  "Ricardo": {
@@ -48,7 +48,7 @@ window.addEventListener('load', function () {
 	                    },
 	              "16":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Rubén":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
 	                                  "Ricardo": {
@@ -65,7 +65,7 @@ window.addEventListener('load', function () {
 	        "agosto":{
 	              "5":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Rubén":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
 	                                  "Ricardo": {
@@ -120,10 +120,10 @@ window.addEventListener('load', function () {
 	        "setiembre":{
 	              "22":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Alberto":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
-	                                  "Ricardo": {
+	                                  "Gerson": {
 	                                              "cargo":"Asesor"}
 	                                  },
 	                  "evento":{
@@ -135,11 +135,11 @@ window.addEventListener('load', function () {
 	                    },
 	              "27":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
-	                                          "cargo":"Supervisor"
+	                                "Melania":{ 
+	                                          "cargo":"Supervisora"
 	                                  },
-	                                  "Ricardo": {
-	                                              "cargo":"Asesor"}
+	                                  "Danna": {
+	                                              "cargo":"Asesora"}
 	                                  },
 	                  "evento":{
 	                              "dato":"1"
@@ -150,7 +150,7 @@ window.addEventListener('load', function () {
 	                    },
 	              "30":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Rubén":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
 	                                  "Ricardo": {
@@ -167,7 +167,7 @@ window.addEventListener('load', function () {
 	        "diciembre":{
 	              "5":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Rubén":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
 	                                  "Ricardo": {
@@ -182,7 +182,7 @@ window.addEventListener('load', function () {
 	                    },
 	              "16":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Rubén":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
 	                                  "Ricardo": {
@@ -201,7 +201,7 @@ window.addEventListener('load', function () {
 	        "enero":{
 	              "5":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Rubén":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
 	                                  "Ricardo": {
@@ -216,7 +216,7 @@ window.addEventListener('load', function () {
 	                    },
 	              "16":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Rubén":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
 	                                  "Ricardo": {
@@ -233,7 +233,7 @@ window.addEventListener('load', function () {
 	        "agosto":{
 	              "5":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Rubén":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
 	                                  "Ricardo": {
@@ -248,7 +248,7 @@ window.addEventListener('load', function () {
 	                    },
 	              "16":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Rubén":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
 	                                  "Ricardo": {
