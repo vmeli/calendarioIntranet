@@ -4,7 +4,8 @@ var data = {
               "5":{
                   "cumpleano":{
                                 "Ruben":{ 
-                                          "cargo":"Supervisor"
+                                          "cargo":"Supervisor",
+                                          "img" : "png"
                                   },
                                   "Ricardo": {
                                               "cargo":"Asesor"}

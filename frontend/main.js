@@ -78,13 +78,36 @@ window.addEventListener('load', function () {
 	                            "dato":"1"
 	                          }
 	                    },
+	              "15":{
+	                  "evento":{
+	                              "dato":"1"
+	                            },
+	                  "comunicado":{
+	                            "dato":"1"
+	                          }
+	                    },
 	              "23":{
 	                  "cumpleano":{
-	                                "Ruben":{ 
+	                                "Sandor":{ 
 	                                          "cargo":"Supervisor"
 	                                  },
-	                                  "Ricardo": {
+	                                  "Nikky": {
 	                                              "cargo":"Asesor"}
+	                                  },
+	                  "evento":{
+	                              "dato":"1"
+	                            },
+	                  "comunicado":{
+	                            "dato":"1"
+	                          }
+	                    },
+	              "30":{
+	                  "cumpleano":{
+	                                "Helena":{ 
+	                                          "cargo":"Supervisor"
+	                                  },
+	                                 "Yesenia": {
+	                                              "cargo":"Asesora"}
 	                                  },
 	                  "evento":{
 	                              "dato":"1"
@@ -241,18 +264,40 @@ window.addEventListener('load', function () {
 	        }      
 	    }  
 	};
+// CREANDO TEMPLATE
+function setBlockTypeOne(jsonEventOfDay) {
+	let element = "";
+	for(let i in jsonEventOfDay) {
+		if (jsonEventOfDay.hasOwnProperty(i)) {
+			element += '<div>'
+			element += '<h2>' + i + '</h2>';
+			element += '<p>' + jsonEventOfDay[i]["cargo"] + '</p>';
+			element += '</div>'
+		}
+	}
+	return element;
+}
+
+
 
 // CONSTRUCCIÓN DE LOS ELEMENTOS PARA LOS DÍAS ESPECÍFICOS
 function demo(e) {
 	let dataCurrent = document.getElementsByClassName("vcal-header__label")[0].innerText;
 	let arraydataCurrent = dataCurrent.split(" ");
 	let monthCurrent = arraydataCurrent[0].toLowerCase(); 
-	let yearCurrent =  parseInt(arraydataCurrent[1]);
-	console.log(data[yearCurrent]);
+	let yearCurrent = parseInt(arraydataCurrent[1]);
+	let parentBlockElementAdd = document.getElementsByClassName("wrapperTypeEvent")[0]
+	let typeEvent = parentBlockElementAdd.getAttribute("data-wrapper");
 	let element = e.target;
+	//console.log(element.nodeName,"click");
 	if(element.nodeName === 'SPAN') {
-		
-		element = e.target.parentElement; 
+		element = e.target.parentElement;
+	}
+	let indice = parseInt(element.innerText);
+	console.log(typeEvent);
+	if(data[yearCurrent][monthCurrent][indice][typeEvent]) {
+		let blockType = setBlockTypeOne(data[yearCurrent][monthCurrent][indice][typeEvent]);
+		parentBlockElementAdd.innerHTML = blockType;
 	}
 }
 
@@ -260,7 +305,7 @@ function demo(e) {
 // PINTADO DE FECHAS A LA PRIMERA CARGA
 
 // data
-function pintarFechas() {
+function pintarFechas(typeEvent) {
 	let dataCurrent = document.getElementsByClassName("vcal-header__label")[0].innerText;
 	let arraydataCurrent = dataCurrent.split(" ");
 	let monthCurrent = arraydataCurrent[0].toLowerCase(); 
@@ -274,8 +319,10 @@ function pintarFechas() {
 		for (let i = 0; i < DaysCalendar.length; i++) {
 			if (data[yearCurrent][monthCurrent]) {
 				if(data[yearCurrent][monthCurrent][parseInt(DaysCalendar[i].innerText)]) {
-					DaysCalendar[i].classList.add("dia-programada");
-					DaysCalendar[i].onclick = demo;
+					if(data[yearCurrent][monthCurrent][parseInt(DaysCalendar[i].innerText)][typeEvent]) {
+						DaysCalendar[i].classList.add("dia-programada");
+						DaysCalendar[i].onclick = demo;
+					}
 				}
 			}
 		}
@@ -286,13 +333,10 @@ function pintarFechas() {
 var btnNext = document.querySelector("[data-calendar-toggle='next']");
 var btnPrevious = document.querySelector("[data-calendar-toggle='previous']");
 
-pintarFechas();
+pintarFechas("cumpleano");
 
-btnNext.onclick = pintarFechas;
-btnPrevious.onclick = pintarFechas;
-
-//console.log(DaysCalendar[4].innerText)
-//console.log(data[yearCurrent][monthCurrent][parseInt(DaysCalendar[4].innerText)]);
+btnNext.onclick = () => pintarFechas("cumpleano");
+btnPrevious.onclick = () => pintarFechas("cumpleano");
 
 })
 
